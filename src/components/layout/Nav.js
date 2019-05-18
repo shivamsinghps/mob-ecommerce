@@ -13,8 +13,9 @@ import cartlogo from './cartlogo.svg'
 
 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 <Navbar.Collapse id="responsive-navbar-nav">
+<Navbar.Brand className='sttyle'>Mobile Store</Navbar.Brand>
 <Nav className="mr-auto">
-  <Nav.Link href="#Home"><Link to="/"><Navbar.Brand className='sttyle'>Mobile Store</Navbar.Brand><i className="fas fa-mobile-alt" /></Link></Nav.Link>
+  <Link to="/"><i className="fas fa-mobile-alt" /></Link>
   <Nav.Link href="#features">Latest News</Nav.Link>
   <Nav.Link href="#pricing">Super Week Deals!</Nav.Link>
   <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
@@ -26,7 +27,7 @@ import cartlogo from './cartlogo.svg'
   </NavDropdown>
 </Nav>
 <Nav>
-  <Link to="/Cart" ><button class="btn btn-info"><img src={cartlogo} alt='store'  /></button> </Link>
+  <Link to="/Cart" ><button className="btn btn-info"><img src={cartlogo} alt='store'  /></button> </Link>
 
 
 </Nav>

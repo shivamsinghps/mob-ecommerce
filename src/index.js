@@ -7,7 +7,7 @@ import {BrowserRouter as Router} from 'react-router-dom'
 
 ReactDOM.render(<ProductProvider><Router><App /></Router></ProductProvider>, document.getElementById('root'));
 
-if(module.hot)
-{
-  module.hot.accept()
-}
+// if(module.hot)
+// {
+//   module.hot.accept()
+// }
