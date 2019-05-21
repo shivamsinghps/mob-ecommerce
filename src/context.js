@@ -8,7 +8,9 @@ class ProductProvider extends Component {
   state ={
     products:[],
     detailProduct,
-    cart:[]
+    cart:[],
+    modelOpen:false,
+    modelProduct:detailProduct
   }
 
   componentDidMount(){
@@ -55,12 +57,30 @@ class ProductProvider extends Component {
 
   }
 
+  openModel = id =>{
+    const product = this.getItem(id)
+    this.setState(()=>
+  {
+      return {modelProduct:product,modelOpen:true}
+
+  })
+  }
+
+  closeModel =  () =>{
+    this.setState(()=>
+  {
+    return {modelOpen:false}
+  })
+  }
+
   render() {
     return (
     <ProductContext.Provider value={{
       ...this.state,
       handleDetail:this.handleDetail,
-      addToCart:this.addToCart
+      addToCart:this.addToCart,
+      openModel:this.openModel,
+      closeModel:this.closeModel
     }}>
       {this.props.children}
     </ProductContext.Provider>

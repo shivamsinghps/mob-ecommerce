@@ -7,6 +7,7 @@ import Cart from './components/Cart'
 import Default from './components/Default'
 import Details from './components/Details'
 import ProductList from './components/ProductList'
+import Model from './components/Model'
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/Details" component={Details} />
           <Route  component={Default} />
      </Switch>
+     <Model />
 </React.Fragment>
 
   )
