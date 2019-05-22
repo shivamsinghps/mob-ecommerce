@@ -8,7 +8,7 @@ class ProductProvider extends Component {
   state ={
     products:[],
     detailProduct,
-    cart:[],
+    cart:storeProducts,
     modelOpen:false,
     modelProduct:detailProduct,
     cartSubTotal:0,
@@ -108,7 +108,7 @@ class ProductProvider extends Component {
       decrement:this.decrement,
       removeItem:this.removeItem,
       clearCart:this.clearCart
-      
+
     }}>
       {this.props.children}
     </ProductContext.Provider>
