@@ -28,7 +28,9 @@ export default class CartItem extends Component {
               <span
                 className="btn btn-black mx-1"
                 onClick={() => {
-                  return decrement(id);
+						 if (count>0){
+                  return decrement(id);}
+
                 }}
               >
                 -
